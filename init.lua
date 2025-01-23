@@ -15,8 +15,6 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.syntax = "on"      -- Syntax highlighting
 
-<<<<<<< HEAD
-=======
 -- Pmenu colors
 vim.cmd [[ hi Pmenu guibg=#191e29 ]]
 vim.cmd [[ hi PmenuSel guibg=#2f394f ]]
@@ -24,7 +22,6 @@ vim.cmd [[ hi PmenuSel guibg=#2f394f ]]
 -- General colorscheme
 vim.cmd [[ colorscheme slate ]]
 
->>>>>>> 0a5e3b7 (upload 2)
 -- Plugin manager setup (Lazy.nvim recommended)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -44,10 +41,6 @@ require("lazy").setup({
   { "williamboman/mason.nvim", config = true },
   { "williamboman/mason-lspconfig.nvim", config = true },
   { "neovim/nvim-lspconfig" },
-<<<<<<< HEAD
-  { "nvim-java/nvim-java" },
-=======
->>>>>>> 0a5e3b7 (upload 2)
 
   -- Syntax highlighting with Treesitter
   {
@@ -77,17 +70,6 @@ require("mason-lspconfig").setup({
 })
 
 -- LSP Config
-<<<<<<< HEAD
-require('java').setup()
-
-=======
->>>>>>> 0a5e3b7 (upload 2)
 local lspconfig = require("lspconfig")
 lspconfig.jdtls.setup({})
-lspconfig.lua_ls.setup({})
 lspconfig.pyright.setup({})
-<<<<<<< HEAD
-lspconfig.ts_ls.setup({})
-=======
->>>>>>> 0a5e3b7 (upload 2)
-
