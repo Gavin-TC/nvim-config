@@ -13,7 +13,7 @@ vim.opt.hlsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.clipboard = "unnamedplus"
-vim.opt.syntax = "on"      -- Syntax highlighting
+vim.opt.syntax = "on"
 
 -- Pmenu colors
 vim.cmd [[ hi Pmenu guibg=#191e29 ]]
@@ -22,7 +22,7 @@ vim.cmd [[ hi PmenuSel guibg=#2f394f ]]
 -- General colorscheme
 vim.cmd [[ colorscheme slate ]]
 
--- Plugin manager setup (Lazy.nvim recommended)
+-- Setup stuff
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -36,40 +36,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  -- LSP and tools
-  { "williamboman/mason.nvim", config = true },
-  { "williamboman/mason-lspconfig.nvim", config = true },
-  { "neovim/nvim-lspconfig" },
+require("core.plugins")
+require("core.plugin_config")
 
-  -- Syntax highlighting with Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = { "lua", "python", "javascript", "html", "css" }, -- Add langs you use
-        highlight = { enable = true },
-      })
-    end,
-  },
-
-  -- Auto closing braces
-  {
-	"windwp/nvim-autopairs",
-	event = "InsertEnter",
-	config = true,
-	opts = {},
-  },
-})
-
--- Mason setup
-require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "pyright", "ts_ls", "clangd" }, -- Replace with LSPs you need
-})
-
--- LSP Config
-local lspconfig = require("lspconfig")
-lspconfig.jdtls.setup({})
-lspconfig.pyright.setup({})
