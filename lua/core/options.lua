@@ -14,10 +14,9 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.syntax = "on"
 
---[=[ Pmenu colors
+-- Pmenu colors
 vim.cmd [[ hi Pmenu guibg=#191e29 ]]
 vim.cmd [[ hi PmenuSel guibg=#2f394f ]]
 
 -- General colorscheme
 vim.cmd [[ colorscheme slate ]]
---]=]

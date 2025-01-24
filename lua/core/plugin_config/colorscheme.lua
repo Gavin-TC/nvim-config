@@ -3,7 +3,6 @@ require("catppuccin").setup({
 	transparent_background = true,
 	styles = {
 		comments = "italic",
-		keywords = "italic",
 	},
 })
 

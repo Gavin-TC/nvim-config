@@ -1,8 +1,9 @@
 require("lazy").setup({
-  { "ellisonleao/gruvbox.nvim", name = "gruvbox", priority = 1001 },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  "nvim-tree/nvim-tree.lua",
+  --{ "ellisonleao/gruvbox.nvim", name = "gruvbox", priority = 1001 },
+  --{ "catppuccin/nvim", name = "catppuccin", priority = 1002 },
   "ellisonleao/gruvbox.nvim",
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
 
@@ -29,3 +30,6 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" }
   },
 })
+
+require("nvim-tree").setup()
+
