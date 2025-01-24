@@ -1,9 +1,11 @@
 require("lazy").setup({
+  { "ellisonleao/gruvbox.nvim", name = "gruvbox", priority = 1001 },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "nvim-tree/nvim-tree.lua",
   "ellisonleao/gruvbox.nvim",
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
+
   -- completion
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
