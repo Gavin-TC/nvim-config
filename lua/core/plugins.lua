@@ -8,11 +8,17 @@ require("lazy").setup({
   "nvim-treesitter/nvim-treesitter",
 
   -- completion
-  "hrsh7th/nvim-cmp",
-  "hrsh7th/cmp-nvim-lsp",
-  "L3MON4D3/LuaSnip",
-  "saadparwaiz1/cmp_luasnip",
-  "rafamadriz/friendly-snippets",
+  {
+	"hrsh7th/nvim-cmp",
+	dependencies = {
+	  "hrsh7th/cmp-nvim-lsp",
+	  "hrsh7th/cmp-buffer",
+	  "hrsh7th/cmp-path",
+	  "saadparwaiz1/cmp_luasnip",
+	  "L3MON4D3/LuaSnip",
+	  "rafamadriz/friendly-snippets",
+	},
+  },
   "github/copilot.vim",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
